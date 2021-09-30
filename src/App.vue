@@ -45,6 +45,9 @@ export default {
   computed: {
     currentUser() {
       return localStorage.getItem('user')
+    },
+    isAdmin() {
+      return AuthService.hasRoles('ROLE_ADMIN')
     }
   },
   methods: {
