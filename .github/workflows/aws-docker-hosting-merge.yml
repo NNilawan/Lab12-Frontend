@@ -33,7 +33,7 @@ jobs:
         name: prepare the docker-compose run
         run: |
               mkdir 331-frontend
-              cp docker-compose.yml vue-331/docker-compose.yml
+              cp docker-compose.yml 331-frontend/docker-compose.yml
               cd 331-frontend
               docker-compose -H ${{ secrets.HOST_SERVER }} down
               docker-compose -H ${{ secrets.HOST_SERVER }} pull
