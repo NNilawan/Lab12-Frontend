@@ -36,6 +36,12 @@ export default {
     },
     register(user) {
         return apiClient.post('/registers', user)
+            .then((response) => {
+                return Promise.resolve(response.data)
+            })
+            .catch((error) => {
+                return Promise.reject(error)
+            })
             // return apiClient.post('/register', {
             //     username: user.username,
             //     firstname: user.firstname,

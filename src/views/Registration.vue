@@ -127,7 +127,10 @@ export default {
           this.loading = false
         })
         .catch(() => {
-          this.$router.push('NetworkError')
+          this.message = 'Register failed'
+          this.successful = false
+          this.loading = false
+          this.$router.push('/registers')
         })
     }
   }
